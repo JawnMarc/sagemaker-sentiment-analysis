@@ -84,8 +84,6 @@ def train(model, train_loader, epochs, optimizer, loss_fn, device):
 
             loss.backward()  # compute backpropagation
             optimizer.step()  # update weights
-
-
             total_loss += loss.data.item()
 
         print("Epoch: {}, BCELoss: {}".format(epoch, total_loss / len(train_loader)))
